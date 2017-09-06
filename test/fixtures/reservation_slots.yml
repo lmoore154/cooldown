@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: one
+  start_time: 2017-09-05 21:46:59
+  end_time: 2017-09-05 21:46:59
+  booked_by: MyString
+  phone_number: MyString
+  email: MyString
+
+two:
+  location: two
+  start_time: 2017-09-05 21:46:59
+  end_time: 2017-09-05 21:46:59
+  booked_by: MyString
+  phone_number: MyString
+  email: MyString
