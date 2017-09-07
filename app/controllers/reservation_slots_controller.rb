@@ -1,6 +1,6 @@
 class ReservationSlotsController < ApplicationController
 
-  def available
+  def index
     render json: ReservationSlot.available.includes(:location)
   end
 
