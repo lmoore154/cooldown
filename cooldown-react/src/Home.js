@@ -3,7 +3,9 @@ import DatePicker from 'react-datepicker'
 import moment from 'moment'
 import React, { Component } from 'react'
 
-import 'react-datepicker/dist/react-datepicker.css';
+import 'react-datepicker/dist/react-datepicker.css'
+
+import ReservationForm from './ReservationForm'
 
 class Home extends Component {
   constructor(props) {
@@ -29,10 +31,15 @@ class Home extends Component {
           </div>
         </div>
         <div className="row">
-          <h4>Please select a date for your reservation</h4>
-          <DatePicker
-            selected={this.state.startDate}
-            onChange={this.handleChange} />
+          <div className="col-md-4">
+            <h4>Please select a date for your reservation</h4>
+            <DatePicker
+              selected={this.state.startDate}
+              onChange={this.handleChange} />
+          </div>
+          <div className="col-md-8">
+            <ReservationForm />
+          </div>
         </div>
       </div>
     )
