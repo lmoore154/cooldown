@@ -1,8 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// Load React
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// Load components
+import Routes from './Routes'
+
+// GLobal Config (can switch beetween local and ngrok/heroku)
+// window.apiHost = 'http://localhost:3001';
+// window.apiHost = 'http://c6b17635.ngrok.io';
+
+// Render root component
+ReactDOM.render(
+    <Routes />,
+    document.getElementById('root')
+)
