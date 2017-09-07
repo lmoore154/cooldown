@@ -1,16 +1,39 @@
-import React, { Component } from 'react'
 import { browserHistory, Link } from 'react-router'
+import DatePicker from 'react-datepicker'
+import moment from 'moment'
+import React, { Component } from 'react'
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      startDate: moment()
+    }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    })
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-offset-4 col-md-4">
+            <h2>Welcome to Cool Down</h2>
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="row">
+          <h4>Please select a date for your reservation</h4>
+          <DatePicker
+            selected={this.state.startDate}
+            onChange={this.handleChange} />
+        </div>
       </div>
     )
   }
